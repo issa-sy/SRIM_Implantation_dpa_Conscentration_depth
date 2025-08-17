@@ -40,6 +40,6 @@ ax2.plot(depth, dpa, 'r--', label="dpa profile")
 ax2.set_ylabel("Number of dpa", color='r')
 ax2.tick_params(axis='y', labelcolor='r')
 
-plt.title("SRIM calculation for Cs @1e15 cm^-2, 800 keV")
+plt.title("SRIM calculation for Cs $10^{15}$ at.cm$^{-2}$, 800 keV")
 fig.tight_layout()
 plt.show()
