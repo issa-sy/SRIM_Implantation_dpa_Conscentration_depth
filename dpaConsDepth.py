@@ -40,6 +40,17 @@ ax2.plot(depth, dpa, 'r--', label="dpa profile")
 ax2.set_ylabel("Number of dpa", color='r')
 ax2.tick_params(axis='y', labelcolor='r')
 
+# Rassembler les légendes des deux axes
+lines = []
+labels = []
+for ax in [ax1, ax2]:
+    for line in ax.get_lines():
+        lines.append(line)
+        labels.append(line.get_label())
+
+# Ajouter la légende dans le graphique
+ax1.legend(lines, labels, loc='upper right', bbox_to_anchor=(1.0, 1.0))
+
 plt.title("SRIM calculation for Cs $10^{15}$ at.cm$^{-2}$, 800 keV")
 fig.tight_layout()
 plt.show()
